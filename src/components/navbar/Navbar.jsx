@@ -1,6 +1,7 @@
 // import logo from "../../assets/Zepto-logo.avif";
 import profile from "../../assets/user.png";
 import wishlist from "../../assets/wishlist.svg";
+import "./Navbar.css";
 const Navbar = () => {
   return (
     <>

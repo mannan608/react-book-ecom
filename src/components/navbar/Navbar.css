@@ -1,0 +1,26 @@
+.nav-right-side .nav-link {
+  padding: 0;
+}
+.nav-right-side .nav-link .wishlist {
+  height: 32px;
+  width: 32px;
+}
+
+.nav-right-side .nav-link.profile img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.nav-link.profile {
+  background: var(--bs-neutral-100);
+  border-radius: 50%;
+}
+.navbar {
+  padding: 0;
+}
