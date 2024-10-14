@@ -1,11 +1,21 @@
 import "./App.css";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <h6>mannan</h6>
+      <div className="app-wrapper">
+        <Navbar />
+        <div className="main-content">
+          <div className="container-fluid">
+            <Home />
+          </div>
+        </div>
 
-      <button className="btn btn-primary btn-sm">save</button>
+        <Footer />
+      </div>
     </>
   );
 }
