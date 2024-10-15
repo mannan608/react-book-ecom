@@ -1,23 +1,22 @@
-import { useState } from "react";
-import Select from "react-select";
-import "./SelectBox.css";
-
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
-const SelectBox = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+const SelectBox = ({ genre, genreFilterItem, setItem }) => {
+  const handleGenreChange = (e) => {
+    setItem(e.target.value);
+  };
 
   return (
     <>
-      <Select
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        options={options}
-      />
+      <select
+        className="form-select"
+        aria-label="Select by genre"
+        onChange={handleGenreChange}
+      >
+        <option value="">Select by genre</option>
+        {genre.map((genre, index) => (
+          <option key={index} value={genre}>
+            {genre}
+          </option>
+        ))}
+      </select>
     </>
   );
 };

@@ -23,6 +23,14 @@ const Home = () => {
     setItem(e.target.value);
   };
 
+  const genre = [...new Set(books.map((value) => value.title))];
+
+  const genreFilterItem = (genreItem) => {
+    const newItem = books.filter((newval) => newval.title == genreItem);
+    setProduct(newItem);
+    // console.log(genreItem);
+  };
+
   useEffect(() => {
     setProduct(books);
   }, [books]);
@@ -38,7 +46,11 @@ const Home = () => {
           <SearchBox searchItem={searchItem} />
         </div>
         <div className="filter-options w-25">
-          <SelectBox />
+          <SelectBox
+            genre={genre}
+            genreFilterItem={genreFilterItem}
+            setItem={setItem}
+          />
         </div>
       </div>
       <div className="book-lists mt-4">

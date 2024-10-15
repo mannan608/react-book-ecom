@@ -1,6 +1,8 @@
 const BookCard = ({ item }) => {
   const { id, title, authors, formats, bookshelves } = item;
   const coverImage = formats["image/jpeg"];
+
+  // console.log(bookshelves);
   return (
     <>
       <div className="product">
