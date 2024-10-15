@@ -28,7 +28,7 @@
 
 .book-lists {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 0;
   gap: 18px;
   row-gap: 30px;
@@ -42,4 +42,18 @@
 .search-box .form-control {
   padding-left: 48px;
   position: relative;
+}
+
+.products-img {
+  height: 304px;
+  border-radius: 8px;
+}
+.products-img img {
+  border-radius: 8px;
+}
+.product .card {
+  box-shadow: none;
+  border-radius: 8px;
+  border: 1px solid var(--bs-neutral-200) !important;
+  /* height: 420px; */
 }

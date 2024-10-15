@@ -1,5 +1,5 @@
 import searchIcon from "../../assets/search_box_icon.svg";
-const SearchBox = () => {
+const SearchBox = ({ searchItem }) => {
   return (
     <>
       <div className="search-box position-relative">
@@ -8,6 +8,7 @@ const SearchBox = () => {
           className="form-control"
           placeholder="Search Every Things"
           id="searchInput"
+          onChange={searchItem}
         />
         <img
           src={searchIcon}

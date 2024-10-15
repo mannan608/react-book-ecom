@@ -42,7 +42,7 @@ const Navbar = () => {
                     href="#"
                   >
                     <img src={wishlist} alt="wishlist" className="wishlist " />
-                    <span class="badge text-bg-danger">4</span>
+                    <span className="badge text-bg-danger">4</span>
                   </a>
                 </li>
                 <li className="nav-item ">
