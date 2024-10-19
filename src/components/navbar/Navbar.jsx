@@ -1,4 +1,6 @@
 // import logo from "../../assets/Zepto-logo.avif";
+import { NavLink } from "react-router-dom";
+
 import profile from "../../assets/user.png";
 import wishlist from "../../assets/wishlist.svg";
 import "./Navbar.css";
@@ -19,14 +21,15 @@ const Navbar = () => {
             <div className="nav-menu">
               <ul className="navbar-nav flex-row gap-4" id="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
-                    Home
-                  </a>
+                  <NavLink className="nav-link" to="/">
+                    HOME
+                  </NavLink>
                 </li>
+
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
-                    Shop
-                  </a>
+                  <NavLink className="nav-link" to="/">
+                    SHOP
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -36,15 +39,15 @@ const Navbar = () => {
                 id="navbar-nav"
               >
                 <li className="nav-item">
-                  <a
+                  <NavLink
                     className="nav-link position-relative"
-                    aria-current="page"
-                    href="#"
+                    to="/wishlist"
                   >
                     <img src={wishlist} alt="wishlist" className="wishlist " />
                     <span className="badge text-bg-danger">4</span>
-                  </a>
+                  </NavLink>
                 </li>
+
                 <li className="nav-item ">
                   <a className="nav-link profile" aria-current="page" href="#">
                     <img src={profile} alt="profile" />

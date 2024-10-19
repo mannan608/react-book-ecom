@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BookCard = ({ item }) => {
   const { id, title, authors, formats, bookshelves } = item;
   const coverImage = formats["image/jpeg"];
@@ -6,7 +8,7 @@ const BookCard = ({ item }) => {
   return (
     <>
       <div className="product">
-        <a href="#">
+        <Link to={`/book/${id}`}>
           <div className="card">
             <div className="products-img">
               <img src={coverImage} className="productImage" alt="productImg" />
@@ -18,7 +20,7 @@ const BookCard = ({ item }) => {
               <p>Genres: {bookshelves.join(", ")}</p>
             </div>
           </div>
-        </a>
+        </Link>
         <div className="product_wishlist">
           <a href="" className="add-to-wishlist">
             <img src="#" alt="" className="w-auto h-auto" />
