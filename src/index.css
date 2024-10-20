@@ -895,7 +895,7 @@ address {
   border: 1px solid transparent !important;
 }
 .pagination .page-link {
-  width: 32px;
+  /* width: 32px; */
   height: 32px;
   display: flex;
   align-items: center;

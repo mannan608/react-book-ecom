@@ -54,8 +54,6 @@
 .product .card {
   box-shadow: none;
   border-radius: 8px;
-  border: 1px solid var(--bs-neutral-200) !important;
-  /* height: 420px; */
 }
 
 .book-details img {
@@ -64,22 +62,64 @@
 }
 .product {
   position: relative;
-}
-.product_wishlist {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: none;
-  transition: 0.4s ease-in-out;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--bs-neutral-300);
+  border: 1px solid var(--bs-neutral-200) !important;
   border-radius: 4px;
-  z-index: 2;
-  cursor: pointer;
+  padding-bottom: 1rem;
 }
-.product:hover .product_wishlist {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.w-book-cover {
+  height: 84px;
+  width: 84px;
+}
+.product_wishlist span {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .container-fluid {
+    width: 100%;
+  }
+  .app-wrapper {
+    padding: 0 30px;
+  }
+  .navbar {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brandlogo {
+    width: 180px;
+  }
+  .filter-area {
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-wrapper {
+    padding: 0 20px;
+  }
+  .navbar {
+    padding: 0 20px !important;
+  }
+  .filter-options.w-25 {
+    width: 50% !important;
+  }
+  .search-area.w-75 {
+    width: 50% !important;
+  }
+  .navbar-wrapper {
+    height: 64px;
+  }
+}
+@media (max-width: 480px) {
+  .tbody .row .cell.title {
+    width: calc(100% - 180px) !important;
+  }
+}
+@media (max-width: 425px) {
+  .brandlogo {
+    width: 140px;
+  }
 }

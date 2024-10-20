@@ -1,5 +1,10 @@
 .nav-right-side .nav-link {
   padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 .nav-right-side .nav-link .wishlist {
   height: 32px;
@@ -13,8 +18,8 @@
 }
 .badge {
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: -4px;
+  top: 0px;
 }
 
 .nav-link.profile {

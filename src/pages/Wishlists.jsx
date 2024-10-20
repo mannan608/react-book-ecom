@@ -8,29 +8,32 @@ const Wishlists = () => {
   console.log("wish book", wishlist);
 
   return (
-    <div>
+    <div className="d-flex align-items-center flex-column">
       <h1>Your Wishlist</h1>
       {wishlist.length === 0 ? (
-        <p>No items in wishlist</p>
+        <p className="mt-5 text-center">No items in wishlist</p>
       ) : (
-        <div className="table-wrapper">
+        <div className="table-wrapper mt-4">
           <div className="table">
             <div className="tbody">
               {wishlist.map((book) => (
-                <div className="row" key={book.id}>
-                  <div
-                    className="cell"
-                    data-width="110px"
-                    style={{ width: 110 }}
-                  >
-                    <img src={book.formats["image/jpeg"]} alt={title} />
+                <div className="row gap-3" key={book.id}>
+                  <div className="cell" style={{ width: 84 }}>
+                    <img
+                      src={book.formats["image/jpeg"]}
+                      alt={title}
+                      className="w-book-cover"
+                    />
                   </div>
-                  <div classname="cell" data-width="90px" style={{ width: 90 }}>
+                  <div className="cell title" style={{ width: 250 }}>
                     {book.title}
                   </div>
 
-                  <div className="cell" data-width="64px" style={{ width: 80 }}>
-                    <button onClick={() => removeFromWishlist(book.id)}>
+                  <div className="cell" style={{ width: 64 }}>
+                    <button
+                      className="btn btn-link"
+                      onClick={() => removeFromWishlist(book.id)}
+                    >
                       <svg
                         width={25}
                         height={24}
@@ -66,16 +69,6 @@ const Wishlists = () => {
             </div>
           </div>
         </div>
-        // <ul>
-        //   {wishlist.map((product) => (
-        //     <li key={product.id}>
-        //       {product.name}
-        //       <button onClick={() => removeFromWishlist(product.id)}>
-        //         Remove
-        //       </button>
-        //     </li>
-        //   ))}
-        // </ul>
       )}
     </div>
   );

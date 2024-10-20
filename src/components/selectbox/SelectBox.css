@@ -32,7 +32,7 @@
 
 .custom-dropdown label {
   width: 100%;
-  padding: 11px;
+  padding: 7px 11px;
   border: 1px solid var(--bs-neutral-300);
   border-radius: 4px;
   font-size: 16px;

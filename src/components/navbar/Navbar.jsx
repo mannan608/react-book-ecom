@@ -1,6 +1,7 @@
-// import logo from "../../assets/Zepto-logo.avif";
+import logo from "../../assets/Zepto-logo.avif";
+import Bar from "../../assets/fa_bar.svg";
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import profile from "../../assets/user.png";
 import wishlistIcon from "../../assets/wishlist.svg";
@@ -15,14 +16,16 @@ const Navbar = () => {
           <nav className="navbar h-100">
             <div className="navbar-brand">
               <div className="mobile-nav-toggler">
-                <img className="" src="#" alt="" />
+                <img className="" src={Bar} alt="Bar" />
               </div>
-              <div className="brandlogo">
-                <img src="{logo}" alt="" className="" />
-              </div>
+              <Link to="/">
+                <div className="brandlogo">
+                  <img src={logo} alt="" className="" />
+                </div>
+              </Link>
             </div>
             <div className="nav-menu">
-              <ul className="navbar-nav flex-row gap-4" id="navbar-nav">
+              {/* <ul className="navbar-nav flex-row gap-4" id="navbar-nav">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
                     HOME
@@ -34,7 +37,7 @@ const Navbar = () => {
                     SHOP
                   </NavLink>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="nav-right-side d-flex gap-4 align-items-center">
               <ul
