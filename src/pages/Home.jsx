@@ -39,6 +39,10 @@ const Home = () => {
     filterProducts();
   }, [item]);
 
+  // const handleWishlist = (wishlistItem) => {
+  //   console.log("wishlistItem", wishlistItem);
+  // };
+
   return (
     <>
       <div className="filter-area d-flex align-items-center gap-5">
@@ -54,8 +58,8 @@ const Home = () => {
         </div>
       </div>
       <div className="book-lists mt-4">
-        {product?.map((item) => {
-          return <BookCard item={item} key={item.id} />;
+        {product?.map((book) => {
+          return <BookCard book={book} key={book.id} />;
         })}
       </div>
     </>

@@ -1,10 +1,13 @@
 // import logo from "../../assets/Zepto-logo.avif";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import profile from "../../assets/user.png";
-import wishlist from "../../assets/wishlist.svg";
+import wishlistIcon from "../../assets/wishlist.svg";
+import { WishlistContext } from "../../context/WishlistContext";
 import "./Navbar.css";
 const Navbar = () => {
+  const { wishlist } = useContext(WishlistContext);
   return (
     <>
       <div className="navbar-wrapper">
@@ -43,8 +46,14 @@ const Navbar = () => {
                     className="nav-link position-relative"
                     to="/wishlist"
                   >
-                    <img src={wishlist} alt="wishlist" className="wishlist " />
-                    <span className="badge text-bg-danger">4</span>
+                    <img
+                      src={wishlistIcon}
+                      alt="wishlist"
+                      className="wishlist "
+                    />
+                    <span className="badge text-bg-danger">
+                      {wishlist.length}
+                    </span>
                   </NavLink>
                 </li>
 

@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-const BookCard = ({ item }) => {
-  const { id, title, authors, formats, bookshelves } = item;
+import wishlist from "../../assets/wishlist.svg";
+import { WishlistContext } from "../../context/WishlistContext";
+
+const BookCard = ({ book }) => {
+  const { addToWishlist } = useContext(WishlistContext);
+  const { id, title, authors, formats, bookshelves } = book;
   const coverImage = formats["image/jpeg"];
 
   // console.log(bookshelves);
@@ -21,10 +26,8 @@ const BookCard = ({ item }) => {
             </div>
           </div>
         </Link>
-        <div className="product_wishlist">
-          <a href="" className="add-to-wishlist">
-            <img src="#" alt="" className="w-auto h-auto" />
-          </a>
+        <div className="product_wishlist" onClick={() => addToWishlist(book)}>
+          <img src={wishlist} alt="" className="w-auto h-auto" />
         </div>
       </div>
     </>
